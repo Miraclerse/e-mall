@@ -43,20 +43,22 @@ spring:
     url: jdbc:mysql://localhost:3306/emall
     username: root
     password: 你的密码
-2. 启动后端
+
+
+### 2.启动后端
 bash
 cd backend
 mvn spring-boot:run
 后端运行在：http://localhost:8080/api
 
-3. 启动前端
+### 3. 启动前端
 bash
 cd frontend
 npm install
 npm run serve
 前端运行在：http://localhost:8082
 
-4. 访问系统
+### 4. 访问系统
 页面	地址
 首页	http://localhost:8082/
 商品列表	http://localhost:8082/products
@@ -64,7 +66,7 @@ npm run serve
 后台管理	http://localhost:8082/admin/manage
 默认账号: admin / admin123
 
-📁 项目结构
+##📁 项目结构
 text
 e-mall/
 ├── backend/                    # 后端 Spring Boot 项目
@@ -89,7 +91,7 @@ e-mall/
 │
 └── database/
     └── schema.sql              # 数据库建表脚本
-📸 功能预览
+##📸 功能预览
 首页
 轮播图展示主要商品
 
@@ -115,7 +117,7 @@ e-mall/
 
 上架/下架切换
 
-📝 API 接口
+##📝 API 接口
 接口	方法	说明
 /api/admin/login	POST	管理员登录
 /api/product/list	GET	商品列表（分页）
@@ -124,14 +126,15 @@ e-mall/
 /api/product/update	PUT	更新商品
 /api/product/delete/{id}	DELETE	删除商品
 /api/product/toggle/{id}	PUT	切换上架/下架
-📄 课程信息
+
+##📄 课程信息
 课程名称: 网络系统开发与设计
 
 学校: 桂林理工大学
 
 小组成员: 张三、李四、王五
 
-📜 许可证
+##📜 许可证
 仅供学习交流使用
 
 text
