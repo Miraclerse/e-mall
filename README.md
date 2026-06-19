@@ -45,7 +45,7 @@ spring:
     url: jdbc:mysql://localhost:3306/emall
     username: root
     password: 你的密码
-
+ ``` 
 ### 2. 启动后端                  
 
 cd backend
