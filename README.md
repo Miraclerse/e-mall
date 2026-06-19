@@ -125,7 +125,7 @@ e-mall/
 上架/下架切换
 
 ## 📝 API 接口                 
-
+```
 接口	方法	说明
 /api/admin/login	POST	管理员登录
 /api/product/list	GET	商品列表（分页）
@@ -134,7 +134,7 @@ e-mall/
 /api/product/update	PUT	更新商品
 /api/product/delete/{id}	DELETE	删除商品
 /api/product/toggle/{id}	PUT	切换上架/下架
-
+```
 ## 📄 课程信息                    
 
 课程名称: 网络系统开发与设计
