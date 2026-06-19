@@ -69,7 +69,7 @@ npm run serve
 默认账号: admin / admin123
 
 ## 📁 项目结构                  
-
+```
 e-mall/
 ├── backend/                    # 后端 Spring Boot 项目
 │   ├── src/main/java/com/emall/
@@ -93,7 +93,7 @@ e-mall/
 │
 └── database/
     └── schema.sql              # 数据库建表脚本
-
+```
 ## 📸 功能预览                   
 
 ### 首页        
