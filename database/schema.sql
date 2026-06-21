@@ -39,3 +39,42 @@ INSERT INTO product (name, price, description, image_url, status) VALUES
                                                                       ('Sony WH-1000XM5', 2999.00, '旗舰降噪，30小时续航，轻量化设计', '/upload/sony.jpg', 0);
 USE emall;
 UPDATE admin SET password = '$2a$10$Et7ount2s3Ash1/DSHILMOB2XHZm4xt9TF0bNLnEzhYsR1wt32b9m' WHERE username = 'admin';
+
+-- 订单表
+CREATE TABLE orders (
+                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                        order_no VARCHAR(32) NOT NULL UNIQUE COMMENT '商户订单号',
+                        product_id BIGINT NOT NULL COMMENT '商品ID',
+                        product_name VARCHAR(100) NOT NULL COMMENT '商品名称',
+                        quantity INT DEFAULT 1 COMMENT '购买数量',
+                        total_amount DECIMAL(10,2) NOT NULL COMMENT '订单金额（元）',
+                        buyer_name VARCHAR(50) COMMENT '购买人姓名',
+                        buyer_phone VARCHAR(20) COMMENT '购买人电话',
+                        status TINYINT DEFAULT 0 COMMENT '0-待付款 1-已付款 2-已取消',
+                        pay_time DATETIME COMMENT '付款时间',
+                        remark VARCHAR(255) COMMENT '备注',
+                        create_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+                        update_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- 订单表
+USE emall;
+DROP TABLE IF EXISTS orders;=utf8mb4 COMMENT='订单表';
+
+DROP TABLE IF EXISTS orders;
+
+CREATE TABLE orders (
+                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                        order_no VARCHAR(32) NOT NULL UNIQUE,
+                        product_id BIGINT NOT NULL,
+                        product_name VARCHAR(100) NOT NULL,
+                        quantity INT DEFAULT 1,
+                        total_amount DECIMAL(10,2) NOT NULL,
+                        buyer_name VARCHAR(50),
+                        buyer_phone VARCHAR(20),
+                        status TINYINT DEFAULT 0,
+                        pay_time DATETIME,
+                        remark VARCHAR(255),
+                        create_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+                        update_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
